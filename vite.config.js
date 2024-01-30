@@ -16,7 +16,7 @@ export default defineConfig({
     vue({
         template: {
           transformAssetUrls: {
-            base: 'https://dev.devstep.com.br/milo/',
+            base: null,
             includeAbsolute: false,
           },
         },
