@@ -10,7 +10,17 @@ export default defineConfig({
               'resources/js/app.js',
             ],
             refresh: true,
-        }), 
+        }),
+        
+
+    vue({
+        template: {
+          transformAssetUrls: {
+            base: 'https://dev.devstep.com.br/',
+            includeAbsolute: false,
+          },
+        },
+      }),
     ],   
     
 });
