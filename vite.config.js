@@ -10,17 +10,7 @@ export default defineConfig({
               'resources/js/app.js',
             ],
             refresh: true,
-        }),
-        
-
-    vue({
-        template: {
-          transformAssetUrls: {
-            base: null,
-            includeAbsolute: false,
-          },
-        },
-      }),
+        }), 
     ],   
     
 });
