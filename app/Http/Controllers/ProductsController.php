@@ -14,16 +14,23 @@ class ProductsController extends Controller
 {
     public function index($slug)
     {
-        $products = Product::where('slug', $slug)->first(); 
+        $products = Product::where('slug', $slug)->first();
 
+        $product_categorie = Product::with('category')->orderBy('id', 'desc')->limit(8)->get();
         $categories = Category::get();
-        $brands = Brand::get();
-        
+        $brands = Brand::get(); 
+        $relatedPosts = Product::with('brand', 'category', 'product_images')->where('id', '!=', $products->id)
+            ->where('published', 0) 
+            ->orderByDesc('id')
+            ->take(2)
+            ->get(); 
+
         return Inertia::render(
             'Product/Index',
             [
-                'categories'=> $categories,
-                'brands'=> $brands,
+                'categories' => $categories,
+                'relatedPosts' => $relatedPosts,
+                'brands' => $brands,
                 'products' => $products
             ]
         );

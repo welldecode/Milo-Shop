@@ -16,11 +16,15 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::with('category', 'brand', 'product_images')->get();
-  
+        $brands = Brand::get();
+        $categories = Category::get();
+
         return Inertia::render(
             'Admin/Product/Index',
             [
-                'products' => $products,  
+                'products' => $products,
+                'brands' => $brands,
+                'categories' => $categories
             ]
         );
     }

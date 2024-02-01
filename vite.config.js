@@ -11,12 +11,11 @@ export default defineConfig({
             ],
             refresh: true,
         }),
-        
-
+         
     vue({
         template: {
           transformAssetUrls: {
-            base: 'https://dev.devstep.com.br/',
+            base: null,
             includeAbsolute: false,
           },
         },

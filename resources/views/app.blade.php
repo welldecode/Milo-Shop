@@ -8,12 +8,12 @@
     <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts --> 
+    @routes
     @vite(['resources/js/app.js', 'resources/scss/app.scss', "resources/js/Pages/{$page['component']}.vue"])
     @inertiaHead
 </head>
 
 <body class="bg-[#FCFCFC] overflow-x-hidden ">
-    @inertia 
-    @routes
+    @inertia  
 </body> 
 </html>

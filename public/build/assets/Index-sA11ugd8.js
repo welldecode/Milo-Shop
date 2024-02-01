@@ -1,0 +1,1 @@
+import{_ as t}from"./AdminLayout-Ih0V9Vec.js";import o from"./ProductList-1T6r4mmO.js";import{o as a,c,w as s,a as e}from"./app-M4UiiRmd.js";import"./Navbar-sTzE-Zwo.js";import"./Sidebar-vFK8qOXp.js";const f={__name:"Index",props:{products:Array},setup(r){return(p,m)=>(a(),c(t,null,{default:s(()=>[e(o,{products:r.products},null,8,["products"])]),_:1}))}};export{f as default};

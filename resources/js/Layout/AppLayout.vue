@@ -17,7 +17,7 @@ defineProps({
 </script>
 <template>
     <Head :title="title" />
-    <header class="bg-[#fffefc] mb-10   border-2 border-solid border-slate-100">
+    <header class="bg-[#fffefc] mb-10 border-2 border-solid border-slate-100">
         <div class="container mx-auto  flex justify-between items-center h-20">
             <div class="flex items-center gap-12">
                 <Link class="logo flex items-center gap-4 text-lg font-bold text-zinc-800" href="/">
@@ -160,8 +160,7 @@ defineProps({
                     </path>
                 </svg>
                 </Link>
-                <MiniCart />
-
+                <MiniCart /> 
             </div>
         </div>
     </header>
